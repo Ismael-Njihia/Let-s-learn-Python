@@ -1,0 +1,32 @@
+# Stack implementation using List
+stack=[]
+def push():
+    if len(stack)==size: # check wether the stack is full or not
+        print("Stack is Full!!!!")
+    else:
+        element=input("Enter the element:")
+        stack.append(element)
+        print(stack)
+def pop_element():
+    if not stack:# or if len(stack)==0
+        print("Stack is Empty!!!")
+    else:
+        e=stack.pop()
+        print("element removed!!:",e)
+        print(stack)
+def display():
+    print(stack)
+    size=int(input("Enter the size of Stack:"))
+    while True:
+        print("Select the Operation:\n 1.Push \n 2.Pop \n 3. Display \n 4. Quit")
+        ch=int(input())
+        if ch==1:
+            push()
+        elif ch==2:
+            pop_element()
+        elif ch==3:
+            display()
+        elif ch==4:
+            break
+        else:
+            print("Invalid Option!!!")
