@@ -1,0 +1,21 @@
+import random
+
+Interval = 1000
+
+circle_points = 0
+square_points = 0
+
+# Total Random numbers generated= possible x
+# values* possible y values
+for i in range (Interval ** 2):
+    rand_x = random.uniform(-1, 1)
+    rand_y = random.uniform(-1, 1)
+
+    origin_dist = rand_x**2 + rand_y
+
+if origin_dist<=1:
+   circle_points+=1
+
+   square_points+=1
+pi = 4* circle_points/ square_points
+
